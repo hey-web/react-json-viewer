@@ -3,9 +3,10 @@
   text-align: left;
   font-size: 1.2rem;
   line-height: 1.5;
+  background-color: #F5F5F5;
   
   .bracket {
-    color: #4f5555;
+    color: #282c34;
   }
 
   label {
@@ -14,5 +15,16 @@
 
   section {
     padding-left: 2em;
+  }
+
+  button.expand-btn {
+    outline: 1px solid hsla(226, 37%, 51%, 1);
+    border: none;
+    background-color: transparent;
+    font-size: 0.8em;
+    width: 1.5em;
+    height: 1.5em;
+    line-height: 1;
+    padding: 0;
   }
 }
