@@ -1,5 +1,15 @@
 .App {
+  min-height: 100vh;
   text-align: center;
+  background-color: #f6f5ec;
+  color: #4f5555;
+  display: flex;
+  flex-direction: row;
+
+  & > textarea, & > section {
+    width: 50%;
+    min-height: 100vh;
+  }
 }
 
 .App-logo {
@@ -9,7 +19,7 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;

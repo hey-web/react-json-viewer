@@ -1,26 +1,31 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import JsonViewer from './components/JsonViewer';
 
 class App extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = { json: {}};
+  }
+
+  handleInput = (e) => {
+    let input = e.target.value;
+    try{
+      this.setState({json: JSON.parse(input)});
+    }catch(e){
+      //do nothing
+    }
+  }
+  
   render() {
+    
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <main className="App">
+        <textarea onKeyUp={this.handleInput}>
+        </textarea>
+        <JsonViewer json={this.state.json}/>
+      </main>
     );
   }
 }
