@@ -76,41 +76,12 @@ class Node extends Component {
   }
 }
 
-// const Node = ({k, val, last=false}) => {
-//   let nodes = [];
-//   if (typeof k != 'undefined') {
-//     nodes.push(<NodeKey key={0} k={k}/>);
-//   }
-
-//   let expanded = true;
-  
-//   let toggle = () => {
-//     expanded = !expanded
-//     console.log(expanded);
-//   }
-//   if (val instanceof Array) {
-//     nodes.push(<Bracket key={0.01} b={'['}/>);
-//     nodes.push(<CxpandBtn key={0.1} expanded={expanded} onClick={toggle}/>);
-//     nodes.push(<NodeList key={0.2} list={val}/>);
-//     nodes.push(<Bracket key={0.3} b={']'}/>);
-//   } else if(val && typeof val === 'object') {
-//     nodes.push(<Bracket key={1.0} b={'{'}/>);
-//     nodes.push(<CxpandBtn key={1.1} expanded={expanded} onClick={toggle}/>);
-//     nodes.push(<NodeMap key={1.2} map={val}/>);
-//     nodes.push(<Bracket key={1.3} b={'}'}/>);
-//   } else {
-//     nodes.push(<span key={1}>{typeof val === 'string' ? '"' + val + '"': val}</span>);
-//   }
-//   return <div>{nodes}{!last&&','}</div>;
-// }
-
-
 const JsonViewer = ({json = {}}) => {
   return <section className={'json-viewer'}><Node val={json} last={true}/></section>;
 }
 
 JsonViewer.propTypes = {
-  json: PropTypes.object.isRequired
+  json: PropTypes.object
 };
 
 export default JsonViewer;
