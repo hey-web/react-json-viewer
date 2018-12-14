@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.scss';
+import styles from './App.module.scss';
 import JsonViewer from './components/JsonViewer';
 
 class App extends Component {
@@ -21,8 +21,8 @@ class App extends Component {
   render() {
     
     return (
-      <main className="App">
-        <textarea onKeyUp={this.handleInput}>
+      <main className={styles.App}>
+        <textarea spellcheck="false" onKeyUp={this.handleInput}>
         </textarea>
         <JsonViewer json={this.state.json}/>
       </main>
