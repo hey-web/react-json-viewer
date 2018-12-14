@@ -1,4 +1,4 @@
-import './JsonViewer.scss';
+import styles from './JsonViewer.module.scss';
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 
@@ -77,7 +77,7 @@ class Node extends Component {
 }
 
 const JsonViewer = ({json = {}}) => {
-  return <section className={'json-viewer'}><Node val={json} last={true}/></section>;
+  return <section className={styles.jsonViewer}><Node val={json} last={true}/></section>;
 }
 
 JsonViewer.propTypes = {
