@@ -3,31 +3,36 @@
   text-align: center;
   background-color: #FAFAFA;
   color: #212121;
-  display: flex;
-  flex-direction: row;
+}
 
-  & > textarea, & > section {
-    width: 50%;
-    min-height: 100vh;
-    font-family: monospace;
-    font-size: 1.4rem;
+.AppBody {
+  width: 100%;
+  margin-top: 10vh;
+  min-height: 90vh;
+  .WorkSpace {
+    display: flex;
+    flex-direction: row;
+    & > textarea, & > section {
+      height: 90vh;
+      width: 50%;
+      font-family: monospace;
+      font-size: 1.4rem;
+    }
+  }
+  .About {
+    display: flex;
+    font-size: 1.6rem;
+    margin-top: 2em;
+    min-height: 10em;
+    padding: 1em;
+    background-color: #2979FF;
+    color: #fff;
   }
 }
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 10vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
 .App-link {
