@@ -1,34 +1,53 @@
 .App {
   min-height: 100vh;
   text-align: center;
-  background-color: #FAFAFA;
   color: #212121;
-}
 
-.AppBody {
-  width: 100%;
-  margin-top: 10vh;
-  min-height: 90vh;
-  .WorkSpace {
-    display: flex;
-    flex-direction: row;
-    & > textarea, & > section {
+  & > header {
+    height: 60px;
+  }
+
+  .AppBody {
+    width: 100%;
+    margin-top: 100px;
+    min-height: 90vh;
+    .WorkSpace {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
       height: 90vh;
-      width: 50%;
-      font-family: monospace;
-      font-size: 1.4rem;
+
+      & > a {
+        position: relative;
+        top: -65px;
+      }
+      & > textarea, & > section {
+        height: 100%;
+        width: 45%;
+        outline: none;
+        font-family: monospace;
+        font-size: 1.4rem;
+        padding: 0.5em;
+      }
+    }
+    .About, .Support, .Contact {
+      display: flex;
+      font-size: 1.6rem;
+      margin: 40vh auto 0;
+      min-height: calc(100vh - 40vh);
+      padding: 1em;
+      background-color: #F5F5F5;
+      box-shadow: 0 4px 4px silver;
+
+      & > a {
+        position: relative;
+        top: -65px;
+      }
     }
   }
-  .About {
-    display: flex;
-    font-size: 1.6rem;
-    margin-top: 2em;
-    min-height: 10em;
-    padding: 1em;
-    background-color: #2979FF;
-    color: #fff;
-  }
 }
+
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;

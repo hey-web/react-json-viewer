@@ -26,6 +26,7 @@ class App extends Component {
         <Header></Header>
         <main className={styles.AppBody}>
           <section className={styles.WorkSpace}>
+            <a name="workspace"></a>
             <textarea spellCheck="false" onKeyUp={this.handleInput}>
             </textarea>
             <JsonViewer json={this.state.json}/>
